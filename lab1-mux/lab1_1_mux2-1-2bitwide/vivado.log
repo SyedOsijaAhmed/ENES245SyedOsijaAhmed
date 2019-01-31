@@ -2,82 +2,104 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Jan 29 07:42:12 2019
-# Process ID: 3848
-# Current directory: C:/Users/FoersterGame/Documents/GitHub/ENES247/lab1-mux/lab1_1_mux2-1-2bitwide
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9260 C:\Users\FoersterGame\Documents\GitHub\ENES247\lab1-mux\lab1_1_mux2-1-2bitwide\lab1_1_mux2-1-2bitwide.xpr
-# Log file: C:/Users/FoersterGame/Documents/GitHub/ENES247/lab1-mux/lab1_1_mux2-1-2bitwide/vivado.log
-# Journal file: C:/Users/FoersterGame/Documents/GitHub/ENES247/lab1-mux/lab1_1_mux2-1-2bitwide\vivado.jou
+# Start of session at: Thu Jan 31 16:09:27 2019
+# Process ID: 11192
+# Current directory: C:/Users/SET253-03U.HCCMAIN/Documents/Github/ENES245/ENES245SyedOsijaAhmed/lab1-mux/lab1_1_mux2-1-2bitwide
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10808 C:\Users\SET253-03U.HCCMAIN\Documents\Github\ENES245\ENES245SyedOsijaAhmed\lab1-mux\lab1_1_mux2-1-2bitwide\lab1_1_mux2-1-2bitwide.xpr
+# Log file: C:/Users/SET253-03U.HCCMAIN/Documents/Github/ENES245/ENES245SyedOsijaAhmed/lab1-mux/lab1_1_mux2-1-2bitwide/vivado.log
+# Journal file: C:/Users/SET253-03U.HCCMAIN/Documents/Github/ENES245/ENES245SyedOsijaAhmed/lab1-mux/lab1_1_mux2-1-2bitwide\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/FoersterGame/Documents/GitHub/ENES247/lab1-mux/lab1_1_mux2-1-2bitwide/lab1_1_mux2-1-2bitwide.xpr
+open_project C:/Users/SET253-03U.HCCMAIN/Documents/Github/ENES245/ENES245SyedOsijaAhmed/lab1-mux/lab1_1_mux2-1-2bitwide/lab1_1_mux2-1-2bitwide.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/SET253-03U.HCCMAIN/Documents/Github/ENES245/ENES245SyedOsijaAhmed/lab1-mux/lab1_1_mux2-1-2bitwide'
+INFO: [Project 1-313] Project file moved from 'C:/Users/FoersterGame/Documents/GitHub/ENES247/lab1-mux/lab1_1_mux2-1-2bitwide' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 734.145 ; gain = 146.871
 update_compile_order -fileset sources_1
-launch_simulation
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/FoersterGame/Documents/GitHub/ENES247/lab1-mux/lab1_1_mux2-1-2bitwide/lab1_1_mux2-1-2bitwide.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'mux_2bit_2_to_1_gate' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/FoersterGame/Documents/GitHub/ENES247/lab1-mux/lab1_1_mux2-1-2bitwide/lab1_1_mux2-1-2bitwide.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj mux_2bit_2_to_1_gate_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/FoersterGame/Documents/GitHub/ENES247/lab1-mux/lab1_1_mux2-1-2bitwide/lab1_1_mux2-1-2bitwide.srcs/sources_1/imports/lab1_1_mux2-1-2bitwide/mux_2bit_2_to_1_gate.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_2bit_2_to_1_gate
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/FoersterGame/Documents/GitHub/ENES247/lab1-mux/lab1_1_mux2-1-2bitwide/lab1_1_mux2-1-2bitwide.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/FoersterGame/Documents/GitHub/ENES247/lab1-mux/lab1_1_mux2-1-2bitwide/lab1_1_mux2-1-2bitwide.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 763743e8b5b84b92a463c4729dd27c45 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot mux_2bit_2_to_1_gate_behav xil_defaultlib.mux_2bit_2_to_1_gate xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.mux_2bit_2_to_1_gate
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot mux_2bit_2_to_1_gate_behav
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: mux_2bit_2_to_1_gate
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 797.652 ; gain = 42.988
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'mux_2bit_2_to_1_gate' [C:/Users/SET253-03U.HCCMAIN/Documents/Github/ENES245/ENES245SyedOsijaAhmed/lab1-mux/lab1_1_mux2-1-2bitwide/lab1_1_mux2-1-2bitwide.srcs/sources_1/imports/lab1_1_mux2-1-2bitwide/mux_2bit_2_to_1_gate.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mux_2bit_2_to_1_gate' (1#1) [C:/Users/SET253-03U.HCCMAIN/Documents/Github/ENES245/ENES245SyedOsijaAhmed/lab1-mux/lab1_1_mux2-1-2bitwide/lab1_1_mux2-1-2bitwide.srcs/sources_1/imports/lab1_1_mux2-1-2bitwide/mux_2bit_2_to_1_gate.v:6]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 837.777 ; gain = 83.113
+---------------------------------------------------------------------------------
 
-****** Webtalk v2018.3 (64-bit)
-  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
-  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 837.777 ; gain = 83.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 837.777 ; gain = 83.113
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/SET253-03U.HCCMAIN/Documents/Github/ENES245/ENES245SyedOsijaAhmed/lab1-mux/lab1_1_mux2-1-2bitwide/lab1_1_mux2-1-2bitwide.srcs/constrs_1/imports/lab1_1_mux2-1-2bitwide/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [C:/Users/SET253-03U.HCCMAIN/Documents/Github/ENES245/ENES245SyedOsijaAhmed/lab1-mux/lab1_1_mux2-1-2bitwide/lab1_1_mux2-1-2bitwide.srcs/constrs_1/imports/lab1_1_mux2-1-2bitwide/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1124.656 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 1211.164 ; gain = 456.500
+6 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 1211.164 ; gain = 456.500
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Thu Jan 31 16:10:27 2019] Launched synth_1...
+Run output will be captured here: C:/Users/SET253-03U.HCCMAIN/Documents/Github/ENES245/ENES245SyedOsijaAhmed/lab1-mux/lab1_1_mux2-1-2bitwide/lab1_1_mux2-1-2bitwide.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 2
+[Thu Jan 31 16:11:03 2019] Launched impl_1...
+Run output will be captured here: C:/Users/SET253-03U.HCCMAIN/Documents/Github/ENES245/ENES245SyedOsijaAhmed/lab1-mux/lab1_1_mux2-1-2bitwide/lab1_1_mux2-1-2bitwide.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Jan 31 16:12:20 2019] Launched impl_1...
+Run output will be captured here: C:/Users/SET253-03U.HCCMAIN/Documents/Github/ENES245/ENES245SyedOsijaAhmed/lab1-mux/lab1_1_mux2-1-2bitwide/lab1_1_mux2-1-2bitwide.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
-source C:/Users/FoersterGame/Documents/GitHub/ENES247/lab1-mux/lab1_1_mux2-1-2bitwide/lab1_1_mux2-1-2bitwide.sim/sim_1/behav/xsim/xsim.dir/mux_2bit_2_to_1_gate_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] 'C:/Users/FoersterGame/Documents/GitHub/ENES247/lab1-mux/lab1_1_mux2-1-2bitwide/lab1_1_mux2-1-2bitwide.sim/sim_1/behav/xsim/xsim.dir/mux_2bit_2_to_1_gate_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Jan 29 07:42:34 2019. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.3/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Tue Jan 29 07:42:34 2019...
-INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/FoersterGame/Documents/GitHub/ENES247/lab1-mux/lab1_1_mux2-1-2bitwide/lab1_1_mux2-1-2bitwide.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "mux_2bit_2_to_1_gate_behav -key {Behavioral:sim_1:Functional:mux_2bit_2_to_1_gate} -tclbatch {mux_2bit_2_to_1_gate.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-source mux_2bit_2_to_1_gate.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'mux_2bit_2_to_1_gate_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 811.582 ; gain = 15.832
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-close_project
-exit
-INFO: [Common 17-206] Exiting Vivado at Tue Jan 29 07:44:19 2019...
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A8B0CAA
+set_property PROGRAM.FILE {C:/Users/SET253-03U.HCCMAIN/Documents/Github/ENES245/ENES245SyedOsijaAhmed/lab1-mux/lab1_1_mux2-1-2bitwide/lab1_1_mux2-1-2bitwide.runs/impl_1/mux_2bit_2_to_1_gate.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/SET253-03U.HCCMAIN/Documents/Github/ENES245/ENES245SyedOsijaAhmed/lab1-mux/lab1_1_mux2-1-2bitwide/lab1_1_mux2-1-2bitwide.runs/impl_1/mux_2bit_2_to_1_gate.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw

@@ -33,21 +33,39 @@ SW[0] is x, SW[1] is y, SW[2] is the select line and LED[0] is the output m. SW[
 
 *In the rtl schematic screen shot, the two **and gates** are connected to select and not select. Describe what they are doing in terms of what a mux does.*
 
+Answer: The select and not select are the data lines from which we provide data to the mux, we can change the data feeding into the mux by using those input lines.
+
 *In the rtl schematic screen shot, what does the **or gate** do in terms of what a mux does?*
+
+Answer: The two AND gates in the MUX feed  to the OR gates before showing the output as lighting up the LED.
 
 *How does the schematic change after running synthesis?*
 
+Answer: The schematic changes from having 3 cells and 6 nets before synthesis to 5 cells and 8 nets, and turns it into a 3 NOT gates feeding into a LUT which outputs into a NOT gate before the output.
+
 *After running synthesis and implementation, clicking on synthesis under RTL, synthesis and Implementation continues to display the LUT based diagram. Not the gate based diagram. Why? Form a reasonable, non-trivial, relevant hypothesis.* 
+
+Answer: After running the synthesis and implementation the LUT based diagram is displayed and not the gate based diagram as now going back will have several possibilities of the gate based diagram as the LUT based diagram is the summarized version of several possible gate based diagrams.
 
  *The black and white design window appears first after running which step of the workflow?*
 
+Answer: The black and white design window appears after running the synthesis and implementation and zooming into the device leaf cells.
+
 *How what can you click on to see a region of the device window change from some color to white?*
+
+Answer: You have to open the design under the leaf cell tab and click and drag to see a region of the device.
 
 *White arrows in the screen shot above are helping us see what?* 
 
+Answer: The white arrows in the above diagram are showing the inputs and the outputs.
+
 *How does Data flow in the fpga from left to right, right to left, bottom up, top down?*
 
+Answer:  The data flow in the fpga left to right using the inputs that are fed and 
+
 *What is the verilog symbol for the white line going up at an angle in the device diagram?*
+
+Answer: 
 
 
 
@@ -77,7 +95,11 @@ One select line now selects between two pair of inputs and displays one of the p
 
 *Explain how to zoom in on the above Device Screen Shot.*
 
+Ctrl+Equals
+
 *Do you see pictures of muxes in the Device Screen Shot? Are they used?*
+
+
 
 *Which stage of the work flow choose the specific LUT above?*
 
