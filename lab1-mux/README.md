@@ -159,7 +159,7 @@ Answer: The vivado shows a simplified version after the synthesis therefore it i
 
 *After implementation, does the schematic change? If so, put a screen shot here.*
 
-Answer: 
+Answer: ![](../../../../../New folder/SS1.png)
 
 *Do the insides of the device reflect the schematic .. after implementation?*
 
@@ -167,7 +167,11 @@ Answer: The insides represent the similar schematic as synthesis.
 
 *What are the truth tables of the one or two LUT(s)? Put a screen shot(s) here.*
 
-Answer: 
+![](../../../../../New folder/SS2.png)
+
+![](../../../../../New folder/SS3.png)
+
+Answer:
 
 *Are the truth tables the same or different? Why would Vivado do this? Is this a bug in Vivado?*
 
@@ -192,6 +196,8 @@ The screen shots and port diagrams above are not going to be done for you. For t
 #### Simulation Screen Shot![1548683422826](1548683422826.png)
 
 #### RTL Schematic Screen shot
+
+
 
 #### Synthesis Schematic Screen shot
 
