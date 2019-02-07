@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/FoersterGame/Documents/GitHub/ENES247/lab1-mux/lab1_3_mux2-1-1bitwide-reg/lab1_3_mux2-1-1bitwide-reg.runs/impl_1'
+HD_PWD='C:/Users/SET253-19U.HCCMAIN/Documents/ENES245Syed/ENES245SyedOsijaAhmed/lab1-mux/lab1_3_mux2-1-1bitwide-reg/lab1_3_mux2-1-1bitwide-reg.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
+/bin/touch .write_bitstream.begin.rst
 EAStep vivado -log mux_2_to_1_behavior.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source mux_2_to_1_behavior.tcl -notrace
 
 

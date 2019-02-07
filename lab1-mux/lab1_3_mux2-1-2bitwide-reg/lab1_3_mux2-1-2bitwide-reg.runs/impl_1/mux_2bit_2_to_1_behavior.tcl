@@ -60,15 +60,13 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   open_checkpoint mux_2bit_2_to_1_behavior_routed.dcp
-  set_property webtalk.parent_dir C:/Users/FoersterGame/Documents/GitHub/ENES247/lab1-mux/lab1_3_mux2-1-2bitwide-reg/lab1_3_mux2-1-2bitwide-reg.cache/wt [current_project]
+  set_property webtalk.parent_dir C:/Users/SET253-19U.HCCMAIN/Documents/ENES245Syed/ENES245SyedOsijaAhmed/lab1-mux/lab1_3_mux2-1-2bitwide-reg/lab1_3_mux2-1-2bitwide-reg.cache/wt [current_project]
   catch { write_mem_info -force mux_2bit_2_to_1_behavior.mmi }
   write_bitstream -force mux_2bit_2_to_1_behavior.bit 
   catch {write_debug_probes -quiet -force mux_2bit_2_to_1_behavior}

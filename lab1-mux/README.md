@@ -392,6 +392,8 @@ Answer: I believe the last one.
 
 #### RTL Schematic Screen shot
 
+
+
 #### Synthesis Schematic Screen shot
 
 #### Implementation Device screen shot zoomed in on something interesting
@@ -454,6 +456,8 @@ The simple mux circuits explored in this lab were created with various forms of 
 
 #### Verilog Code
 
+
+
 #### RTL Schematic Screen shot
 
 #### Synthesis Schematic Screen shot
@@ -499,9 +503,11 @@ One of the ways we know what is going on is to predict Vivado's behavior. This c
 
 #### RTL Schematic Screen shot
 
-#### Synthesis Schematic Screen shot
+#### Synthesis Schematic Screen shot	
 
 #### Implementation Device screen shot zoomed in on something interesting
+
+​	
 
 #### Testing
 

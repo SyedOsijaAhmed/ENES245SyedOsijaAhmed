@@ -60,96 +60,24 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
-start_step init_design
-set ACTIVE_STEP init_design
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
 set rc [catch {
-  create_msg_db init_design.pb
-  set_param synth.incrementalSynthesisCache C:/Users/FoersterGame/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-13108-DESKTOP-KB2R4MG/incrSyn
-  create_project -in_memory -part xc7a100tcsg324-1
-  set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
-  set_property design_mode GateLvl [current_fileset]
-  set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/FoersterGame/Documents/GitHub/ENES247/lab1-mux/lab1_3_mux2-1-1bitwide-reg/lab1_3_mux2-1-1bitwide-reg.cache/wt [current_project]
-  set_property parent.project_path C:/Users/FoersterGame/Documents/GitHub/ENES247/lab1-mux/lab1_3_mux2-1-1bitwide-reg/lab1_3_mux2-1-1bitwide-reg.xpr [current_project]
-  set_property ip_output_repo C:/Users/FoersterGame/Documents/GitHub/ENES247/lab1-mux/lab1_3_mux2-1-1bitwide-reg/lab1_3_mux2-1-1bitwide-reg.cache/ip [current_project]
-  set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet C:/Users/FoersterGame/Documents/GitHub/ENES247/lab1-mux/lab1_3_mux2-1-1bitwide-reg/lab1_3_mux2-1-1bitwide-reg.runs/synth_1/mux_2_to_1_behavior.dcp
-  read_xdc C:/Users/FoersterGame/Documents/GitHub/ENES247/lab1-mux/lab1_3_mux2-1-1bitwide-reg/lab1_3_mux2-1-1bitwide-reg.srcs/constrs_1/imports/lab1_3_mux2-1-1bitwide-reg/Nexys4DDR_Master.xdc
-  link_design -top mux_2_to_1_behavior -part xc7a100tcsg324-1
-  close_msg_db -file init_design.pb
+  create_msg_db write_bitstream.pb
+  open_checkpoint mux_2_to_1_behavior_routed.dcp
+  set_property webtalk.parent_dir C:/Users/SET253-19U.HCCMAIN/Documents/ENES245Syed/ENES245SyedOsijaAhmed/lab1-mux/lab1_3_mux2-1-1bitwide-reg/lab1_3_mux2-1-1bitwide-reg.cache/wt [current_project]
+  catch { write_mem_info -force mux_2_to_1_behavior.mmi }
+  write_bitstream -force mux_2_to_1_behavior.bit 
+  catch {write_debug_probes -quiet -force mux_2_to_1_behavior}
+  catch {file copy -force mux_2_to_1_behavior.ltx debug_nets.ltx}
+  close_msg_db -file write_bitstream.pb
 } RESULT]
 if {$rc} {
-  step_failed init_design
+  step_failed write_bitstream
   return -code error $RESULT
 } else {
-  end_step init_design
-  unset ACTIVE_STEP 
-}
-
-start_step opt_design
-set ACTIVE_STEP opt_design
-set rc [catch {
-  create_msg_db opt_design.pb
-  opt_design 
-  write_checkpoint -force mux_2_to_1_behavior_opt.dcp
-  create_report "impl_1_opt_report_drc_0" "report_drc -file mux_2_to_1_behavior_drc_opted.rpt -pb mux_2_to_1_behavior_drc_opted.pb -rpx mux_2_to_1_behavior_drc_opted.rpx"
-  close_msg_db -file opt_design.pb
-} RESULT]
-if {$rc} {
-  step_failed opt_design
-  return -code error $RESULT
-} else {
-  end_step opt_design
-  unset ACTIVE_STEP 
-}
-
-start_step place_design
-set ACTIVE_STEP place_design
-set rc [catch {
-  create_msg_db place_design.pb
-  if { [llength [get_debug_cores -quiet] ] > 0 }  { 
-    implement_debug_core 
-  } 
-  place_design 
-  write_checkpoint -force mux_2_to_1_behavior_placed.dcp
-  create_report "impl_1_place_report_io_0" "report_io -file mux_2_to_1_behavior_io_placed.rpt"
-  create_report "impl_1_place_report_utilization_0" "report_utilization -file mux_2_to_1_behavior_utilization_placed.rpt -pb mux_2_to_1_behavior_utilization_placed.pb"
-  create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file mux_2_to_1_behavior_control_sets_placed.rpt"
-  close_msg_db -file place_design.pb
-} RESULT]
-if {$rc} {
-  step_failed place_design
-  return -code error $RESULT
-} else {
-  end_step place_design
-  unset ACTIVE_STEP 
-}
-
-start_step route_design
-set ACTIVE_STEP route_design
-set rc [catch {
-  create_msg_db route_design.pb
-  route_design 
-  write_checkpoint -force mux_2_to_1_behavior_routed.dcp
-  create_report "impl_1_route_report_drc_0" "report_drc -file mux_2_to_1_behavior_drc_routed.rpt -pb mux_2_to_1_behavior_drc_routed.pb -rpx mux_2_to_1_behavior_drc_routed.rpx"
-  create_report "impl_1_route_report_methodology_0" "report_methodology -file mux_2_to_1_behavior_methodology_drc_routed.rpt -pb mux_2_to_1_behavior_methodology_drc_routed.pb -rpx mux_2_to_1_behavior_methodology_drc_routed.rpx"
-  create_report "impl_1_route_report_power_0" "report_power -file mux_2_to_1_behavior_power_routed.rpt -pb mux_2_to_1_behavior_power_summary_routed.pb -rpx mux_2_to_1_behavior_power_routed.rpx"
-  create_report "impl_1_route_report_route_status_0" "report_route_status -file mux_2_to_1_behavior_route_status.rpt -pb mux_2_to_1_behavior_route_status.pb"
-  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file mux_2_to_1_behavior_timing_summary_routed.rpt -pb mux_2_to_1_behavior_timing_summary_routed.pb -rpx mux_2_to_1_behavior_timing_summary_routed.rpx -warn_on_violation "
-  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file mux_2_to_1_behavior_incremental_reuse_routed.rpt"
-  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file mux_2_to_1_behavior_clock_utilization_routed.rpt"
-  create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file mux_2_to_1_behavior_bus_skew_routed.rpt -pb mux_2_to_1_behavior_bus_skew_routed.pb -rpx mux_2_to_1_behavior_bus_skew_routed.rpx"
-  close_msg_db -file route_design.pb
-} RESULT]
-if {$rc} {
-  write_checkpoint -force mux_2_to_1_behavior_routed_error.dcp
-  step_failed route_design
-  return -code error $RESULT
-} else {
-  end_step route_design
+  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 
