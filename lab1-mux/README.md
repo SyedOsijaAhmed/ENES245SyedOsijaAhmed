@@ -65,7 +65,7 @@ Answer:  The data flow in the fpga left to right using the inputs that are fed a
 
 *What is the verilog symbol for the white line going up at an angle in the device diagram?*
 
-Answer: 
+Answer: I think here the question is asked about the cursor to draw white lines, which I believed was automatically selected when I opened device diagram.
 
 
 
@@ -95,19 +95,27 @@ One select line now selects between two pair of inputs and displays one of the p
 
 *Explain how to zoom in on the above Device Screen Shot.*
 
-Ctrl+Equals
+Answer: Ctrl+Equals
 
 *Do you see pictures of muxes in the Device Screen Shot? Are they used?*
 
-
+Answer: The picture of muxes in the Device screenshot are visible clearly, the inputs that are being used are shown by white lines.
 
 *Which stage of the work flow choose the specific LUT above?*
 
+Answer: The above stage popped up on screen after running implementation and synthesis before doing bitstream.
+
 *Which stage of the work flow chooses the green lines?*
+
+Answer: The above question design lines opened after running implementation and I  believe since I didn't open it after running synthesis it didn't show me any change.
 
 *What do the white lines represent?* 
 
+Answer: The white lines represent the active lines in the mux representing input, output and select.
+
 *What do the spots where white lines cross represent?*
+
+Answer: They may represent multiple inputs or outputs splits.
 
 ## lab1_2_mux2-1-tristate
 
@@ -135,21 +143,39 @@ Two muxes are implemented using the same inputs with the same select line.  So i
 
 *In the RTL schematic, what is RTL_Mux g1_i doing?*
 
+Answer: It is acting as select line for the RTL_Muxh1_i.
+
 *Which of the two verilog implemented muxes actually created a tristate symbol in the RTL schematic?*
+
+Answer: The inputs a and b and output from mux g1.
 
 *After Synthesis, which of the two verilog implemented muxes looks more simple?*
 
+Answer: I believe that h1 gets more simpler as it has less components than g1 post synthesis.
+
 *After Synthesis, why hasn't Vivado detected that the two circuits are identical?*
+
+Answer: The vivado shows a simplified version after the synthesis therefore it is supposed to be identical but simpler.
 
 *After implementation, does the schematic change? If so, put a screen shot here.*
 
+Answer: 
+
 *Do the insides of the device reflect the schematic .. after implementation?*
+
+Answer: The insides represent the similar schematic as synthesis.
 
 *What are the truth tables of the one or two LUT(s)? Put a screen shot(s) here.*
 
+Answer: 
+
 *Are the truth tables the same or different? Why would Vivado do this? Is this a bug in Vivado?*
 
+Answer: The truth tables are different and this is because its not a bug but the truth table shows how the leds in the circuit behave differently.
+
 *Do some tests modifying this project. Can you make the one line of code mux into a 4 input, 2 select line, 1 output mux in one line?*
+
+Answer: I tried modifying it into a 4input, 2line and 1 output in just one line however I ran into trouble when I tried differentiating the input from output and select as it didn't recognize them as different things.
 
 ## lab1_2_tb_mux2-1-2bitwide
 
@@ -177,27 +203,51 @@ The screen shots and port diagrams above are not going to be done for you. For t
 
 *tb stands for what?*
 
+Answer:  Test bench
+
 *What verilog code is the top level module, the test or the circuit?*
+
+Answer: The top code is showing a test with clocks and other test bench features.
 
 *The verilog code shares the same port interface as the previous 2bit wide circuit. How is the verilog code different?*
 
+Answer:  This is different as it is working with 4 leds and the previous 2 bit wide was working with 2 leds only.
+
 *What name would you give to this verilog abstraction level?*
+
+Answer:  I would say testing level or maybe more detailed level.
 
 *In the simulation, what is the cause of the red box with an X in it above?* 
 
+Answer:  That's the register signal as they are default set to x.
+
 *In the simulation, what do the green boxes with numbers in them mean?*
+
+Answer: The numbers show the clock and the intervals in between them.
 
 *In the simulation, was all the activity captured or are their changes to the left of the yellow vertical line?*
 
+Answer: I believe that not all activity was captured as the changes are represented to the left of yellow line but more changes can be seen if the range is increased.
+
 *Is this simulation associated with RTL, Synthesis or Implementation Vivado analysis?*
+
+Answer:  This simulation is associated with RTL implementation in Vivado analysis.
 
 *Is this a physics simulation or logic simulation?*
 
+Answer: This is a logic simulation.
+
 *Can the previous, port-interface identical, circuit be simulated without test verilog code?*
+
+Answer: I believe yes it can be simulated using a different way other than verilog code.
 
 *If it can be, take a screenshot of the Simulation and compare with this one.*
 
+Answer:  
+
 *If it can't be simulated, take a screenshot of the error message and form a hypothesis of what it is trying to tell you in your own words.*
+
+Answer: 
 
 **Look at this line of code**. It has a module name and then () with nothing in them. 
 
@@ -205,27 +255,47 @@ The screen shots and port diagrams above are not going to be done for you. For t
 
 *Where does the test get it's input?* 
 
+Answer:  The inputs are shown in the above screen shot.
+
 *Where does it's output go?*
+
+Answer: The outputs are shown after the input line ending.
 
 **The next questions** are about this line of code: ![1548766113080](1548766113080.png)
 
 *Which circuit above has the same format of three instructions separated by a space?* 
 
+Answer: I was not able to figure this answer.
+
 *Does the first section refer to the circuit or the test it's self?*
+
+Answer: The first section refers to the circuit.
 
 *DUT stands for Device Under Test. Can this name be changed?*
 
-*What were some of the names used instead of DUT in the circuit above?* 
+Answer: It can be changed to LUT or UUT. 
+
+*What were some of the names used instead of DUT in the circuit above?*
+
+Answer: LUT/UUT/DUT
 
 *What is the purpose of it?* 
+
+Answer: The purpose is to say that it can be implemented using the same code.
 
 **The .x(x) format** is different than the circuit above when calling a module. [Suppose this article](http://verilog.renerta.com/mobile/source/vrg00027.htm) is the first you find that describes what is going on. 
 
 *What are the keywords you searched for to find a better article?* 
 
+Answer: Vivado integration format/ Vivado input format/ Vivado language for LUT, DUT and UUT.
+
 *What is it's URL?* 
 
+Answer: https://www.xilinx.com/support/documentation/sw_manuals/xilinx2014_1/ug903-vivado-using-constraints.pdf
+
 *Is this technique limited to test verilog code or can it be synthesized?* 
+
+Answer: The technique I think it is not limited to verilog code and it can be synthesized but not in all cases.
 
 **The following questions are about this code block:**
 
@@ -233,29 +303,53 @@ The screen shots and port diagrams above are not going to be done for you. For t
 
 *Is the word "end" the end of the "begin" or the end of initial?*
 
+Answer: In the above cropped screen shot, it will act as both as there is no code visible after the end statement therefore it will represent both begin end and initial end.
+
 *Why isn't there a semi-colon after "end"?*
+
+Answer: The semi colon is not necessary to show the ending after writing end as it is a keyword in verilog.
 
 *Are the commands under begin executed sequentially or in parallel?*
 
+Answer: They should not run sequentially as they are running in parallel because of no order.
+
 *Are all the possible combinations of x, y and s tested?* 
+
+Answer: I don't think that all are tested as it would be 3x3x2 = 18 possibilities.
 
 *How many combinations of x,y and s are there?*
 
+Answer:  9
+
 *Is there a reason that the #20; is intended?*
 
+Answer: That's something I don't understand, maybe to show the end of running statements.
+
 *Does white space matter in verilog?*
+
+Answer: I don't think the white space matters in verilog.
 
 **Read these articles** ... about using initial: [argument](https://forums.xilinx.com/t5/Design-Methodologies-and/quot-initial-quot-statement-with-quot-output-quot-variables/td-p/485782), [pro](http://billauer.co.il/blog/2018/02/verilog-initial-xst-quartus-vivado/), [con](https://www.quora.com/Why-are-initial-blocks-synthesizable-in-FPGA-and-not-in-ASIC), . 
 
 *Which article article supplies the most evidence?*
 
+Answer:  The argument article.
+
 *Which article is merely opinion?*
+
+Answer: The con and to some extent pro is merely an opinion.
 
 *Which merely says it is possible?*
 
+Answer: The con one says that it is possible. 
+
 *What concept is the initial concept linked up to ... that we haven't discussed?* 
 
+Answer: The setting up and how to write verilog code from different languages.
+
 *Make up a rule for yourself regarding using verilog initial command now. You can change in the future. What is this rule?*
+
+Answer: The rule is to understand the inputs and outputs and understand the meaning that why is it being implemented and predict outcomes. That will prepare my mind to look at the code and reach a conclusion easily.
 
 **Bigger Picture**
 
@@ -269,16 +363,20 @@ Now answer these questions:
 
 *Do you want to learn how to write verilog to test this stuff, or something like java, c++ or python to test?*
 
+Definitely Yes!
+
 **Even Bigger Picture**
 
-*Does the above test actually test with the Vivado implemented FPGA physics or merely test the Verilog logic?* **Verilog Logic.** 
-*Does Vivado try to communicate physics or logic to you through "Open Synthesized Design", "Open Implemented Design"?* **Physics**
-*Is there a way to build a circuit to test a circuit and put them both in an FPGA?* **Yes**
-*Is there a way to collect data about a circuit in FPGA RAM and then dump it to a PC to test?* **Yes .. Is built into Vivado called ILA (integrated logic analyzer)**
+4 Does the above test actually test with the Vivado implemented FPGA physics or merely test the Verilog logic?* **Verilog Logic.** 
+*2 Does Vivado try to communicate physics or logic to you through "Open Synthesized Design", "Open Implemented Design"?* **Physics**
+*3 Is there a way to build a circuit to test a circuit and put them both in an FPGA?* **Yes**
+*1 Is there a way to collect data about a circuit in FPGA RAM and then dump it to a PC to test?* **Yes .. Is built into Vivado called ILA (integrated logic analyzer)**
 
 *Please rank the above questions by putting a number in front of the with 1 being what you would like to learn first, and 4 being what you would like to learn last .. given that we are working with small circuits.*
 
 *Which of the test methods is more appropriate for a very large project like a CPU?*
+
+Answer: I believe the last one.
 
 ## lab1_3_mux2-1-1bitwide-reg
 
@@ -296,7 +394,9 @@ Now answer these questions:
 
 #### Questions/Tasks
 
-*This circuit is similar to which previous circuit?*
+*This circuit is similar to which previous circuit?* 
+
+Answer: It is similar to tb mux 2 1 2 bitwide.
 
 The @* is the clearest indication of verilog evolution and the difference between system verilog and regular verilog. Here is a summary. Later we will read the [Cliff Cummings, SunBurst paper](http://www.sunburst-design.com/papers/CummingsSNUG2016SV_SVLogicProcs.pdf) paper on this topic. 
 
@@ -310,11 +410,19 @@ The always @* can not reference a clock. There is no clock in our circuit. It is
 
 *reg stands for what?*
 
+Answer: Registers.
+
 *What is m driven by in the previous similar circuit?*
+
+Answer: The m is driven by the outputs.
 
 *What is a reg m driven by in this circuit .. when just looking at the verilog code?*
 
+Answer: The m is driven by the select lines and outputs.
+
 *How is the RTL Schematic of this circuit different the pervious similar circuit?*
+
+I wasn't able to implement the RTL Schematic if this circuit as my pc was getting timed out and getting stuck.
 
 A reg typically uses a D-flip flop inside an FPGA slice. *Do you see any evidence in the schematic or in the device itself of the reg?*
 
@@ -329,6 +437,8 @@ This verilog code is described by Vivado tutorials as at the behavioral abstract
 
 This mux can be [implemented with one line of code](https://github.com/ENES-246DigitalElectronics/ENES246/blob/master/-5MuxOfMux/m2x1Mux/m2x1Mux.srcs/sources_1/new/m2x1mux.v):  assign m = s ? x : y; 
 *Why isn't this talked about above? Why isn't this given the name RTL verilog or Behavioral verilog?*
+
+It isn't talked about because its too direct and makes it difficult to observe  change and behavior.
 
 ## lab1_3_mux2-1-2bitwide-reg
 
@@ -367,7 +477,11 @@ In the Implementation Device screen, there are pictures of a mux. *Why does viva
 
 *When does vivado implement the CLB muxes?*
 
+Answer: I think vivado implements CLB muxes when LUT consists of a flip flop and multiplexer making it more complicated version of LUT.
+
 *Is fast carry logic a control path or data path concept?* 
+
+Answer: Fast carry logic is a data path concept.
 
 ## lab1_4_2-mux2-1inSequence
 
